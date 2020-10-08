@@ -1,0 +1,79 @@
+<?php
+$text = <<< T
+  zsl - Zespół
+  Szkół
+  Łączności <br>
+T;
+
+echo $text;
+echo nl2br($text);
+$name = 'jaNUsZ';
+// zamiana na male litery
+$name = strtolower($name);
+echo strlen($name);
+echo "<br> $name <br>";
+// zamiana na duze litery
+$name = 'krYSTynA';
+echo strtoupper($name); //KRYSTYNA
+//zamiana pierwszej litery na duza
+$name ='<br> aNNa noWaK';
+echo ucfirst($name); // ANNa noWaK
+
+
+//zamiana wszystkich pierwszych liter w wyrazach
+echo ucwords($name);
+
+//zamien zmienna name aby wygladala w nastepujacy sposob: Anna noWaK
+echo ucwords(strtolower($name));
+// lorem ipsum
+$text = <<<LOREM
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+LOREM;
+echo "<br>$text<br>";
+echo wordwrap($text,40,"<hr>");
+
+// czyszczenie zawartosci bufora
+ob_clean(); // czysci stronke
+// usuwanie bialych znakow (tabulatory, spacje)
+$name = 'Anna';
+$name1 = '  Anna ';
+echo 'Długość $name: ',strlen($name), "<br>";
+echo 'Długość $name1: ',strlen($name1),"<br>";
+echo strlen(ltrim($name1)); // 5
+echo strlen(rtrim($name1)); // 6
+echo strlen(trim($name1)); // 4
+
+echo $name1; // 7 (dwa tabulatory z lewej i spacja z prawej)
+$name1 = trim($name1);
+echo strlen($name1); // 4
+
+// przeszukiwanie ciagow znakow
+$address = "Poznań, ul. Polna 2, tel. (61)123-45-67";
+echo "<br>";
+$search = strstr($address, 'tel');
+echo $search; // wypisze nr telefonu z zmiennej address
+
+$address = "Poznań, ul. Polna 2, tel. (61)123-45-67";
+echo "<br>";
+$search = strstr($address, 'tel', true);
+echo $search; // Wypisze nam wszystko co znalazlo przed Tel
+
+$address = "Poznań, ul. Polna 2, tel. (61)123-45-67";
+echo "<br>";
+$search = stristr($address, 'Tel');
+echo $search; // stristr nie zwraca uwagi na wielkosc liter
+
+echo strstr("<br>",'zsl@gmail.com', '@');
+echo strstr("<br>",'zsl@gmail.com', 64);
+
+echo "<br>", substr(strstr('zsl@gmail.com', '@'), 0); // 0 wypisze @gmail.com, 1 wypisze gmail.com. Kolejne cyfry odcinaja kolejne znaki.
+
+
+
+
+
+ ?>
