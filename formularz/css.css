@@ -1,0 +1,22 @@
+body
+{
+  background-color: lightgrey;
+}
+#container
+{
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.big
+{
+  text-align: center;
+  width: auto;
+  height: 900px;
+}
+.small
+{
+  text-align: center;
+  width: auto;
+  height: 100px;
+}
