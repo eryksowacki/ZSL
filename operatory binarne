@@ -5,8 +5,8 @@
    $potega = 2 ** 10;
    echo $potega;
 
-   echo 'a'.'b'.'c'; //a+b+c wyúwietli abc
-   echo 'a','b','c<br>'; //wyúwietli a wyúwietli b wyúwietli c
+   echo 'a'.'b'.'c'; //a+b+c wy≈õwietli abc
+   echo 'a','b','c<br>'; //wy≈õwietli a wy≈õwietli b wy≈õwietli c
 
   // operatory bitowe
   // and &, or || not ~, xor ^, <<, >>
@@ -18,7 +18,7 @@
   $x = $x >> 2;
   echo "$x<br>"; //101(2)=> 1+4=5
 
-  // porÛwnanie
+  // por√≥wnanie
   $x = 10;
   $y = 10;
 
@@ -28,10 +28,10 @@ echo $result;
 
 if ($x===$y)
 {
-  echo 'zmienne sπ identyczne <br>';
+  echo 'zmienne sƒÖ identyczne <br>';
   }
   else {
-    echo 'zmienne nie sπ identyczne <br>';
+    echo 'zmienne nie sƒÖ identyczne <br>';
   }
 
 echo gettype($x); //integer
